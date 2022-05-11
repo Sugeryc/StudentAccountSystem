@@ -1,33 +1,48 @@
 package com.fc.entity;
 
+import org.springframework.stereotype.Component;
+
+/**
+ * 用户实体类
+ * @author Linco
+ *
+ */
+@Component
 public class TUser {
-    private Integer userId;
 
+
+    /*用户名称*/
+    private int userId;
+    /*用户登录名称*/
     private String userName;
+    /* 用户登录密码 */
+    private String password;
 
-    private String passWord;
-
-    public Integer getUserId() {
+    private String type;
+    public int getUserId() {
         return userId;
     }
-
-    public void setUserId(Integer userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
-
     public String getUserName() {
         return userName;
     }
-
     public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+        this.userName = userName;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getPassWord() {
-        return passWord;
-    }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord == null ? null : passWord.trim();
-    }
 }
